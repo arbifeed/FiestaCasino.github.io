@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FiestaCasino - Casino online legal en España con licencia DGOJ. Bono 500€ + 200 giros gratis. Retiros rápidos y juego seguro.">
+    <title>FiestaCasino • Casino Online Legal en España</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap');
+        .hero-bg { background: linear-gradient(135deg, #1a0033 0%, #330066 100%); }
+        .gold { color: #fcd34d; }
+        .glow { text-shadow: 0 0 25px #fcd34d; }
+        .card-hover:hover { transform: translateY(-12px) scale(1.03); box-shadow: 0 30px 40px -15px rgb(250 204 21 / 0.3); }
+        
+        .carousel { position: relative; overflow: hidden; border-radius: 24px; }
+        .carousel-inner { display: flex; transition: transform 0.8s ease-in-out; }
+        .carousel-slide { min-width: 100%; height: 100%; }
+        .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+        
+        @keyframes pulseGold { 0%, 100% { opacity: 1; } 50% { opacity: 0.75; } }
+        .pulse-gold { animation: pulseGold 2.5s infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .spin-slow { animation: spin 25s linear infinite; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white font-sans">
+
+    <!-- NAV -->
+    <nav class="bg-black/90 backdrop-blur-lg fixed w-full z-50 border-b border-yellow-500/30">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-dice-six text-4xl gold spin-slow"></i>
+                <span class="text-3xl font-bold tracking-tighter">FiestaCasino</span>
+            </div>
+            <a href="#registro" class="bg-gradient-to-r from-yellow-400 to-amber-400 text-black font-semibold px-8 py-3.5 rounded-3xl flex items-center gap-2 hover:brightness-110 transition">
+                <i class="fa-solid fa-play"></i> JUGAR AHORA
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO + КАРУСЕЛЬ -->
+    <section class="hero-bg pt-24 pb-12 md:pt-32">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 bg-white/10 px-6 py-3 rounded-3xl text-sm mb-6 pulse-gold">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Licencia DGOJ • Juego Seguro • RNG Certificado</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-none mb-6 glow">
+                    ¡El casino online<br><span class="gold">más seguro y emocionante</span><br>de España!
+                </h1>
+                <p class="text-3xl text-amber-300 mb-8">Bono de bienvenida: <span class="text-5xl font-bold">500€ + 200 giros gratis</span></p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                    <a href="#registro" class="bg-yellow-400 hover:bg-amber-300 text-black text-2xl font-bold px-12 py-6 rounded-3xl flex items-center justify-center gap-3 transition-all active:scale-95">
+                        <i class="fa-solid fa-rocket"></i> REGISTRARSE GRATIS
+                    </a>
+                    <a href="#juegos" class="border-2 border-white/60 hover:border-white text-xl font-medium px-10 py-6 rounded-3xl flex items-center justify-center gap-3 transition-all">
+                        Ver juegos
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-8 text-sm font-medium">
+                    <div><i class="fa-solid fa-check gold"></i> Retiros en 24 horas</div>
+                    <div><i class="fa-solid fa-check gold"></i> Bizum • PayPal</div>
+                    <div><i class="fa-solid fa-check gold"></i> +2500 juegos</div>
+                </div>
+
+                <div class="mt-10 text-xs bg-amber-900/30 border border-amber-700/50 p-4 rounded-2xl max-w-xs">
+                    La ludopatía es un riesgo del juego. El 75% de los jugadores pierden dinero. Juega con responsabilidad.
+                </div>
+            </div>
+
+            <!-- Карусель с твоими файлами -->
+            <div class="relative carousel rounded-3xl overflow-hidden shadow-2xl border border-yellow-400/30 h-96 md:h-[520px]">
+                <div id="carousel-inner" class="carousel-inner h-full">
+                    <div class="carousel-slide"><img src="hero.avif" alt="Ruleta en vivo" class="w-full h-full object-cover"></div>
+                    <div class="carousel-slide"><img src="slots.avif" alt="Tragaperras con jackpot" class="w-full h-full object-cover"></div>
+                    <div class="carousel-slide"><img src="cards.webp" alt="Blackjack en vivo" class="w-full h-full object-cover"></div>
+                    <div class="carousel-slide"><img src="ruleta.jpg" alt="Ambiente premium casino" class="w-full h-full object-cover"></div>
+                </div>
+                <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-4 rounded-full"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-4 rounded-full"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярные игры с твоими файлами -->
+    <section id="juegos" class="py-20 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Juegos más populares</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-zinc-800 rounded-3xl overflow-hidden card-hover">
+                    <img src="ruleta.jpg" alt="Ruleta en Vivo" class="w-full h-52 object-cover">
+                    <div class="p-4 text-center font-medium">Ruleta en Vivo</div>
+                </div>
+                <div class="bg-zinc-800 rounded-3xl overflow-hidden card-hover">
+                    <img src="slots.avif" alt="Book of Dead" class="w-full h-52 object-cover">
+                    <div class="p-4 text-center font-medium">Book of Dead</div>
+                </div>
+                <div class="bg-zinc-800 rounded-3xl overflow-hidden card-hover">
+                    <img src="cards.webp" alt="Blackjack Premium" class="w-full h-52 object-cover">
+                    <div class="p-4 text-center font-medium">Blackjack Premium</div>
+                </div>
+                <div class="bg-zinc-800 rounded-3xl overflow-hidden card-hover">
+                    <img src="hero.avif" alt="Starburst" class="w-full h-52 object-cover">
+                    <div class="p-4 text-center font-medium">Starburst</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Остальная часть страницы (Почему мы, Бонусы, Платежи, Отзывы, Ответственная игра, Footer) -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">¿Por qué miles de españoles ya confían en FiestaCasino?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-800 p-8 rounded-3xl card-hover">
+                    <i class="fa-solid fa-lock text-6xl gold mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">100% Legal y Seguro</h3>
+                    <p class="text-zinc-400">Licencia DGOJ • Juego Seguro • SSL 256-bit • RNG certificado. Tus datos y dinero siempre protegidos.</p>
+                </div>
+                <div class="bg-zinc-800 p-8 rounded-3xl card-hover">
+                    <i class="fa-solid fa-bolt text-6xl gold mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Retiros ultrarrápidos</h3>
+                    <p class="text-zinc-400">Dinero en tu cuenta en menos de 24 horas. Sin esperas, sin excusas.</p>
+                </div>
+                <div class="bg-zinc-800 p-8 rounded-3xl card-hover">
+                    <i class="fa-solid fa-mobile-alt text-6xl gold mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Bizum y PayPal</h3>
+                    <p class="text-zinc-400">Depósitos instantáneos con los métodos favoritos de los españoles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="promos" class="py-20 bg-gradient-to-b from-transparent via-amber-900/10 to-transparent">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">Bono de bienvenida para nuevos jugadores</h2>
+            <div class="text-7xl font-bold gold mb-4">500€ + 200 GIROS GRATIS</div>
+            <p class="text-xl text-zinc-300 mb-10">Depósito mínimo solo 10€ • Cumple con toda la normativa DGOJ</p>
+            <a href="#registro" class="inline-block bg-yellow-400 text-black font-bold text-3xl px-14 py-7 rounded-3xl hover:bg-amber-300 transition">¡ACTIVAR BONO AHORA!</a>
+        </div>
+    </section>
+
+    <section id="pagos" class="py-20 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12">Métodos de pago favoritos en España</h2>
+            <div class="flex flex-wrap justify-center gap-x-16 gap-y-10 text-7xl">
+                <div><i class="fa-brands fa-cc-visa"></i></div>
+                <div><i class="fa-brands fa-cc-mastercard"></i></div>
+                <div class="flex flex-col items-center"><i class="fa-solid fa-mobile-screen-button text-6xl"></i><span class="text-sm mt-2">Bizum</span></div>
+                <div><i class="fa-brands fa-paypal"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Lo que dicen nuestros jugadores</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-800 p-8 rounded-3xl">"Retiré 2.450€ en 14 horas. ¡El mejor casino de España!" — Carlos M., Madrid</div>
+                <div class="bg-zinc-800 p-8 rounded-3xl">"Bizum funciona perfecto y los giros gratis son reales." — Laura P., Barcelona</div>
+                <div class="bg-zinc-800 p-8 rounded-3xl">"Soporte 24/7 en español y nunca problemas con pagos." — Miguel R., Valencia</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="seguro" class="py-20 bg-zinc-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Jugamos con responsabilidad</h2>
+            <div class="bg-amber-950 border border-amber-700 p-8 rounded-3xl">
+                <p class="text-lg mb-6">La ludopatía es un riesgo del juego. El 75% de los jugadores pierden dinero. Las pérdidas superan en 4 veces las ganancias.</p>
+                <div class="flex flex-wrap justify-center gap-6 text-sm">
+                    <a href="#" class="underline hover:text-yellow-400">Límites de depósito</a>
+                    <a href="#" class="underline hover:text-yellow-400">Autoexclusión</a>
+                    <a href="https://www.ordenacionjuego.es" target="_blank" class="underline hover:text-yellow-400">DGOJ • Juego Seguro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div id="registro" class="bg-zinc-900 rounded-3xl p-12 text-center max-w-lg mx-auto">
+                <h2 class="text-4xl font-bold mb-6">¿Listo para empezar a ganar?</h2>
+                <input type="email" placeholder="Tu correo electrónico" class="w-full bg-zinc-800 border border-white/30 focus:border-yellow-400 rounded-3xl px-8 py-6 text-lg mb-6 outline-none">
+                <button onclick="alert('¡Registro demo completado! (En versión real redirigiría al operador con licencia DGOJ)')"
+                        class="w-full bg-gradient-to-r from-yellow-400 to-amber-400 text-black py-7 rounded-3xl font-bold text-2xl hover:brightness-110 transition">
+                    CREAR CUENTA GRATIS
+                </button>
+            </div>
+            <div class="text-center text-xs text-zinc-500 mt-16">
+                © 2026 FiestaCasino — Página demo. Operador ficticio con licencia DGOJ.<br>
+                Cumple con Real Decreto 958/2020 y normativas 2026.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.getElementById('carousel-inner');
+        function showSlide(n) {
+            currentSlide = (n + 4) % 4;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        function nextSlide() { showSlide(currentSlide + 1); }
+        function prevSlide() { showSlide(currentSlide - 1); }
+        setInterval(() => { nextSlide(); }, 4500);
+    </script>
+</body>
+</html>
