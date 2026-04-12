@@ -5,27 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="FiestaCasino - Casino online legal en España con licencia DGOJ. Bono 500€ + 200 giros gratis. Retiros rápidos y juego seguro.">
     <title>FiestaCasino • Casino Online Legal en España</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K26DTLFZ');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) { return; }
+            }
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+        })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=108509400', 'ym');
+
+        ym(108509400, 'init', {
+            ssr: true,
+            webvisor: true,
+            clickmap: true,
+            ecommerce: "dataLayer",
+            referrer: document.referrer,
+            url: location.href,
+            accurateTrackBounce: true,
+            trackLinks: true
+        });
+    </script>
+    <noscript>
+        <div>
+            <img src="https://mc.yandex.ru/watch/108509400" style="position:absolute; left:-9999px;" alt="" />
+        </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap');
         .hero-bg { background: linear-gradient(135deg, #1a0033 0%, #330066 100%); }
         .gold { color: #fcd34d; }
         .glow { text-shadow: 0 0 25px #fcd34d; }
         .card-hover:hover { transform: translateY(-12px) scale(1.03); box-shadow: 0 30px 40px -15px rgb(250 204 21 / 0.3); }
-        
+
         .carousel { position: relative; overflow: hidden; border-radius: 24px; }
         .carousel-inner { display: flex; transition: transform 0.8s ease-in-out; }
         .carousel-slide { min-width: 100%; height: 100%; }
         .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
-        
+
         @keyframes pulseGold { 0%, 100% { opacity: 1; } 50% { opacity: 0.75; } }
         .pulse-gold { animation: pulseGold 2.5s infinite; }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .spin-slow { animation: spin 25s linear infinite; }
     </style>
 </head>
+
 <body class="bg-zinc-950 text-white font-sans">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K26DTLFZ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- NAV -->
     <nav class="bg-black/90 backdrop-blur-lg fixed w-full z-50 border-b border-yellow-500/30">
@@ -34,7 +83,9 @@
                 <i class="fa-solid fa-dice-six text-4xl gold spin-slow"></i>
                 <span class="text-3xl font-bold tracking-tighter">FiestaCasino</span>
             </div>
-            <a href="#registro" class="bg-gradient-to-r from-yellow-400 to-amber-400 text-black font-semibold px-8 py-3.5 rounded-3xl flex items-center gap-2 hover:brightness-110 transition">
+            <a href="#registro"
+               class="cta-button bg-gradient-to-r from-yellow-400 to-amber-400 text-black font-semibold px-8 py-3.5 rounded-3xl flex items-center gap-2 hover:brightness-110 transition"
+               data-cta-location="header">
                 <i class="fa-solid fa-play"></i> JUGAR AHORA
             </a>
         </div>
@@ -52,12 +103,16 @@
                     ¡El casino online<br><span class="gold">más seguro y emocionante</span><br>de España!
                 </h1>
                 <p class="text-3xl text-amber-300 mb-8">Bono de bienvenida: <span class="text-5xl font-bold">500€ + 200 giros gratis</span></p>
-                
+
                 <div class="flex flex-col sm:flex-row gap-4 mb-10">
-                    <a href="#registro" class="bg-yellow-400 hover:bg-amber-300 text-black text-2xl font-bold px-12 py-6 rounded-3xl flex items-center justify-center gap-3 transition-all active:scale-95">
+                    <a href="#registro"
+                       class="cta-button bg-yellow-400 hover:bg-amber-300 text-black text-2xl font-bold px-12 py-6 rounded-3xl flex items-center justify-center gap-3 transition-all active:scale-95"
+                       data-cta-location="hero_main">
                         <i class="fa-solid fa-rocket"></i> REGISTRARSE GRATIS
                     </a>
-                    <a href="#juegos" class="border-2 border-white/60 hover:border-white text-xl font-medium px-10 py-6 rounded-3xl flex items-center justify-center gap-3 transition-all">
+                    <a href="#juegos"
+                       class="border-2 border-white/60 hover:border-white text-xl font-medium px-10 py-6 rounded-3xl flex items-center justify-center gap-3 transition-all"
+                       id="view-games-btn">
                         Ver juegos
                     </a>
                 </div>
@@ -73,7 +128,6 @@
                 </div>
             </div>
 
-            <!-- Карусель с твоими файлами -->
             <div class="relative carousel rounded-3xl overflow-hidden shadow-2xl border border-yellow-400/30 h-96 md:h-[520px]">
                 <div id="carousel-inner" class="carousel-inner h-full">
                     <div class="carousel-slide"><img src="hero.avif" alt="Ruleta en vivo" class="w-full h-full object-cover"></div>
@@ -87,7 +141,6 @@
         </div>
     </section>
 
-    <!-- Популярные игры с твоими файлами -->
     <section id="juegos" class="py-20 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-12">Juegos más populares</h2>
@@ -112,7 +165,6 @@
         </div>
     </section>
 
-    <!-- Остальная часть страницы (Почему мы, Бонусы, Платежи, Отзывы, Ответственная игра, Footer) -->
     <section class="py-20">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16">¿Por qué miles de españoles ya confían en FiestaCasino?</h2>
@@ -141,7 +193,11 @@
             <h2 class="text-4xl font-bold mb-6">Bono de bienvenida para nuevos jugadores</h2>
             <div class="text-7xl font-bold gold mb-4">500€ + 200 GIROS GRATIS</div>
             <p class="text-xl text-zinc-300 mb-10">Depósito mínimo solo 10€ • Cumple con toda la normativa DGOJ</p>
-            <a href="#registro" class="inline-block bg-yellow-400 text-black font-bold text-3xl px-14 py-7 rounded-3xl hover:bg-amber-300 transition">¡ACTIVAR BONO AHORA!</a>
+            <a href="#registro"
+               class="cta-button inline-block bg-yellow-400 text-black font-bold text-3xl px-14 py-7 rounded-3xl hover:bg-amber-300 transition"
+               data-cta-location="bonus_section">
+                ¡ACTIVAR BONO AHORA!
+            </a>
         </div>
     </section>
 
@@ -176,7 +232,7 @@
                 <div class="flex flex-wrap justify-center gap-6 text-sm">
                     <a href="#" class="underline hover:text-yellow-400">Límites de depósito</a>
                     <a href="#" class="underline hover:text-yellow-400">Autoexclusión</a>
-                    <a href="https://www.ordenacionjuego.es" target="_blank" class="underline hover:text-yellow-400">DGOJ • Juego Seguro</a>
+                    <a href="https://www.ordenacionjuego.es" target="_blank" class="underline hover:text-yellow-400" id="dgoj-link">DGOJ • Juego Seguro</a>
                 </div>
             </div>
         </div>
@@ -186,12 +242,19 @@
         <div class="max-w-7xl mx-auto px-6">
             <div id="registro" class="bg-zinc-900 rounded-3xl p-12 text-center max-w-lg mx-auto">
                 <h2 class="text-4xl font-bold mb-6">¿Listo para empezar a ganar?</h2>
-                <input type="email" placeholder="Tu correo electrónico" class="w-full bg-zinc-800 border border-white/30 focus:border-yellow-400 rounded-3xl px-8 py-6 text-lg mb-6 outline-none">
-                <button onclick="alert('¡Registro demo completado! (En versión real redirigiría al operador con licencia DGOJ)')"
-                        class="w-full bg-gradient-to-r from-yellow-400 to-amber-400 text-black py-7 rounded-3xl font-bold text-2xl hover:brightness-110 transition">
-                    CREAR CUENTA GRATIS
-                </button>
+
+                <form id="registration-form">
+                    <input id="email-input" type="email" placeholder="Tu correo electrónico"
+                           class="w-full bg-zinc-800 border border-white/30 focus:border-yellow-400 rounded-3xl px-8 py-6 text-lg mb-6 outline-none" required>
+
+                    <button type="submit"
+                            id="register-button"
+                            class="w-full bg-gradient-to-r from-yellow-400 to-amber-400 text-black py-7 rounded-3xl font-bold text-2xl hover:brightness-110 transition">
+                        CREAR CUENTA GRATIS
+                    </button>
+                </form>
             </div>
+
             <div class="text-center text-xs text-zinc-500 mt-16">
                 © 2026 FiestaCasino — Página demo. Operador ficticio con licencia DGOJ.<br>
                 Cumple con Real Decreto 958/2020 y normativas 2026.
@@ -200,15 +263,107 @@
     </footer>
 
     <script>
+        window.dataLayer = window.dataLayer || [];
+
         let currentSlide = 0;
         const slides = document.getElementById('carousel-inner');
+
         function showSlide(n) {
             currentSlide = (n + 4) % 4;
             slides.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
+
         function nextSlide() { showSlide(currentSlide + 1); }
         function prevSlide() { showSlide(currentSlide - 1); }
+
         setInterval(() => { nextSlide(); }, 4500);
+
+        // Отслеживание CTA-кнопок
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function () {
+                const location = this.dataset.ctaLocation || 'unknown';
+
+                if (typeof ym !== 'undefined') {
+                    ym(108509400, 'reachGoal', 'cta_click');
+                }
+
+                window.dataLayer.push({
+                    event: 'cta_click',
+                    cta_location: location
+                });
+            });
+        });
+
+        // Кнопка "Ver juegos"
+        const viewGamesBtn = document.getElementById('view-games-btn');
+        if (viewGamesBtn) {
+            viewGamesBtn.addEventListener('click', function () {
+                if (typeof ym !== 'undefined') {
+                    ym(108509400, 'reachGoal', 'view_games_click');
+                }
+
+                window.dataLayer.push({
+                    event: 'view_games_click'
+                });
+            });
+        }
+
+        // Клик по внешней ссылке DGOJ
+        const dgojLink = document.getElementById('dgoj-link');
+        if (dgojLink) {
+            dgojLink.addEventListener('click', function () {
+                if (typeof ym !== 'undefined') {
+                    ym(108509400, 'reachGoal', 'dgoj_click');
+                }
+
+                window.dataLayer.push({
+                    event: 'dgoj_click'
+                });
+            });
+        }
+
+        // Отправка demo-формы
+        const form = document.getElementById('registration-form');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                if (typeof ym !== 'undefined') {
+                    ym(108509400, 'reachGoal', 'registration_submit');
+                }
+
+                window.dataLayer.push({
+                    event: 'registration_submit',
+                    form_name: 'demo_registration_form'
+                });
+
+                alert('¡Registro demo completado! (En versión real redirigiría al operador con licencia DGOJ)');
+            });
+        }
+
+        // Просмотр блока регистрации
+        const registroSection = document.getElementById('registro');
+        let registroViewed = false;
+
+        if (registroSection && 'IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !registroViewed) {
+                        registroViewed = true;
+
+                        if (typeof ym !== 'undefined') {
+                            ym(108509400, 'reachGoal', 'registration_view');
+                        }
+
+                        window.dataLayer.push({
+                            event: 'registration_view'
+                        });
+                    }
+                });
+            }, { threshold: 0.4 });
+
+            observer.observe(registroSection);
+        }
     </script>
 </body>
 </html>
